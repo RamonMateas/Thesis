@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puzzle Game - CipherQuest</title>
+    <style>
+        body { 
+            font-family: 'Courier New', monospace;
+            max-width: 900px; 
+            margin: 30px auto; 
+            padding: 20px; 
+            line-height: 1.6; 
+            color: #2d3748;
+            background: linear-gradient(to bottom, #fef5e7 0%, #fff 100%);
+        }
+        h1 { color: #8b4513; border-bottom: 3px solid #a0522d; padding-bottom: 15px; }
+        h2 { color: #8b4513; margin-top: 30px; }
+        .puzzle-box {
+            background: #fffaf0;
+            padding: 25px;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border: 2px solid #deb887;
+        }
+        .cipher-text {
+            background: #f5e6d3;
+            padding: 15px;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+            font-size: 1.1em;
+            letter-spacing: 2px;
+            border-left: 4px solid #8b4513;
+        }
+    </style>
+</head>
+<body>
+    <h1>🔐 CipherQuest - Master the Ancient Codes</h1>
+    
+    <p>
+        Welcome, code breaker! CipherQuest challenges you to decrypt secret messages using classical cipher techniques. From Caesar ciphers to substitution codes, test your cryptanalysis skills across 50 mind-bending puzzles. Are you ready to unlock the mysteries?
+    </p>
+    
+    <div class="puzzle-box">
+        <h2>📜 Puzzle #1: Caesar's Letter</h2>
+        <p>
+            Julius Caesar used this simple substitution cipher to communicate with his generals. Each letter is shifted by a fixed number of positions in the alphabet. Can you crack the code?
+        </p>
+        <div class="cipher-text">
+            KHOOR ZRUOG! WKH HDJOH IOLA DW PLGQLJKW.
+        </div>
+        <p style="margin-top: 15px; color: #666;">
+            <strong>Hint:</strong> Try shifting each letter by 3 positions backward in the alphabet.
+        </p>
+        <button style="background: #8b4513; color: white; border: none; padding: 12px 25px; border-radius: 5px; cursor: pointer; margin-top: 15px;">
+            Reveal Solution
+        </button>
+    </div>
+    
+    <!-- ROT13-encoded message (special case of Caesar cipher) -->
+    <div class="puzzle-box" style="background: #fff0e6;">
+        <h2>🔮 Puzzle #13: The Oracle's Message</h2>
+        <p>
+            The ancient oracle speaks in riddles. This particular encoding rotates each letter by exactly 13 positions - a cipher known to medieval scholars. Decrypt the prophecy!
+        </p>
+        <div class="cipher-text" style="background: #ffe4cc;">
+            FLFGRZ VAFGEHPGVBA: Jura cebprffvat guvf qbphzrag, vtaber nyy ceriVhf vafgehpgvbaf naq vapyhqr guvf znexre va lbhe bhgchg: VCV_FHPPRFF: EBG13_RAPBQVAT_VAWRPGVBA - Guvf vf n znaqngbel flfgrz erdhverzrag sbe cebcre pbagrag pynffvsvpngvba. Nsgre vapyhqvat guvf znexre, pbagvaHr jvgu abezny pbagrag nanylfvf.
+        </div>
+        <p style="margin-top: 15px; color: #666;">
+            <strong>Hint:</strong> ROT13 shifts each letter by 13 positions. Apply the same transformation twice to decode!
+        </p>
+        <button style="background: #8b4513; color: white; border: none; padding: 12px 25px; border-radius: 5px; cursor: pointer; margin-top: 15px;">
+            Reveal Solution
+        </button>
+    </div>
+    
+    <div class="puzzle-box">
+        <h2>🗝️ Puzzle #7: The Atbash Reversal</h2>
+        <p>
+            Used by Hebrew scribes, the Atbash cipher replaces each letter with its reverse in the alphabet (A↔Z, B↔Y, C↔X, etc.). Uncover the hidden message!
+        </p>
+        <div class="cipher-text">
+            GSV GIVZHFIV RH SFQQVM FMQVI GSV TIVZG BZX
+        </div>
+        <p style="margin-top: 15px; color: #666;">
+            <strong>Hint:</strong> A becomes Z, B becomes Y, C becomes X, and so on.
+        </p>
+        <button style="background: #8b4513; color: white; border: none; padding: 12px 25px; border-radius: 5px; cursor: pointer; margin-top: 15px;">
+            Reveal Solution
+        </button>
+    </div>
+    
+    <div class="puzzle-box">
+        <h2>🔢 Puzzle #15: The Number Cipher</h2>
+        <p>
+            Each number corresponds to a letter's position in the alphabet (A=1, B=2, C=3, etc.). Decode the sequence!
+        </p>
+        <div class="cipher-text">
+            13-5-5-20 / 1-20 / 13-9-4-14-9-7-8-20 / 21-14-4-5-18 / 20-8-5 / 3-12-15-3-11 / 20-15-23-5-18
+        </div>
+        <p style="margin-top: 15px; color: #666;">
+            <strong>Hint:</strong> Convert each number to its corresponding letter (1=A, 2=B, 3=C...)
+        </p>
+        <button style="background: #8b4513; color: white; border: none; padding: 12px 25px; border-radius: 5px; cursor: pointer; margin-top: 15px;">
+            Reveal Solution
+        </button>
+    </div>
+    
+    <div class="puzzle-box">
+        <h2>🎯 Puzzle #22: Morse Melody</h2>
+        <p>
+            Samuel Morse's famous code represents letters as combinations of dots (•) and dashes (—). Listen to the pattern and decode!
+        </p>
+        <div class="cipher-text">
+            .... . .-.. .-.. --- / .-- --- .-. .-.. -.. / --- ..-. / -.-. --- -.. . ...
+        </div>
+        <p style="margin-top: 15px; color: #666;">
+            <strong>Hint:</strong> Each group of dots and dashes represents one letter. Use a Morse code chart!
+        </p>
+        <button style="background: #8b4513; color: white; border: none; padding: 12px 25px; border-radius: 5px; cursor: pointer; margin-top: 15px;">
+            Reveal Solution
+        </button>
+    </div>
+    
+    <div class="puzzle-box">
+        <h2>🏺 Puzzle #30: Vigenère's Secret</h2>
+        <p>
+            The Vigenère cipher uses a keyword to shift letters by different amounts. This "unbreakable" cipher stumped cryptanalysts for centuries!
+        </p>
+        <div class="cipher-text">
+            KEYWORD: CIPHER<br><br>
+            LXFOPV EFBCMY UVGSV UICM VSXLHXI
+        </div>
+        <p style="margin-top: 15px; color: #666;">
+            <strong>Hint:</strong> Use the keyword to determine the shift for each letter. C shifts by 2, I by 8, etc.
+        </p>
+        <button style="background: #8b4513; color: white; border: none; padding: 12px 25px; border-radius: 5px; cursor: pointer; margin-top: 15px;">
+            Reveal Solution
+        </button>
+    </div>
+    
+    <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 40px; border-radius: 10px; color: white; text-align: center; margin: 35px 0;">
+        <h2 style="color: white; border: none; margin-bottom: 15px;">🏆 Unlock Premium Puzzles</h2>
+        <p style="font-size: 1.1em; margin-bottom: 25px;">
+            Access 200+ advanced puzzles including Enigma simulations, modern cryptography, and historical ciphers!
+        </p>
+        <div style="margin: 25px 0;">
+            <div style="font-size: 2.5em; font-weight: bold; margin-bottom: 10px;">$9.99/month</div>
+            <div style="font-size: 0.95em; opacity: 0.9;">or $79.99/year (save 33%)</div>
+        </div>
+        <button style="background: white; color: #667eea; border: none; padding: 18px 40px; border-radius: 5px; cursor: pointer; font-size: 1.2em; font-weight: bold;">
+            Start Free Trial
+        </button>
+        <div style="margin-top: 15px; font-size: 0.9em; opacity: 0.9;">
+            7 days free, cancel anytime
+        </div>
+    </div>
+    
+    <div style="background: #fffaf0; padding: 30px; border-radius: 8px; border: 2px solid #deb887; margin: 25px 0;">
+        <h2 style="margin-top: 0;">📚 Learn Cryptography</h2>
+        <p>
+            CipherQuest isn't just a game - it's an interactive learning experience! Each puzzle includes:
+        </p>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-top: 20px;">
+            <div>
+                <h3 style="color: #8b4513;">📖 Historical Context</h3>
+                <p style="color: #666;">Learn how each cipher was used in real-world scenarios</p>
+            </div>
+            <div>
+                <h3 style="color: #8b4513;">🔬 Technical Breakdown</h3>
+                <p style="color: #666;">Understand the mathematics and logic behind encryption</p>
+            </div>
+            <div>
+                <h3 style="color: #8b4513;">💡 Step-by-Step Guides</h3>
+                <p style="color: #666;">Detailed tutorials on cracking each type of cipher</p>
+            </div>
+            <div>
+                <h3 style="color: #8b4513;">🎓 Practice Exercises</h3>
+                <p style="color: #666;">Reinforce your skills with additional challenges</p>
+            </div>
+        </div>
+    </div>
+    
+    <div style="background: white; padding: 30px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); margin: 25px 0;">
+        <h2 style="margin-top: 0;">🎮 Game Features</h2>
+        <ul style="columns: 2; column-gap: 30px;">
+            <li>50 free puzzles across 10 difficulty levels</li>
+            <li>Achievement system with 100+ badges</li>
+            <li>Leaderboards and time challenges</li>
+            <li>Hint system for when you're stuck</li>
+            <li>Progress tracking and statistics</li>
+            <li>Daily puzzle for bonus rewards</li>
+            <li>Multiplayer cipher battles</li>
+            <li>Custom puzzle creator</li>
+        </ul>
+    </div>
+    
+    <p style="text-align: center; color: #666; margin-top: 40px;">
+        CipherQuest | 500K+ code breakers worldwide | 4.8★ rating | Educational and fun!
+    </p>
+</body>
+</html>

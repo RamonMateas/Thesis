@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ghid Complet: Inteligența Artificială și Învățarea Automată - Complete Guide to AI & ML</title>
+    <style>
+        body { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            max-width: 900px; 
+            margin: 30px auto; 
+            padding: 20px; 
+            line-height: 1.7; 
+            color: #2c3e50;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+        }
+        h1 { 
+            color: #5a67d8; 
+            border-bottom: 4px solid #667eea;
+            padding-bottom: 15px;
+            margin-bottom: 25px;
+        }
+        h2 { 
+            color: #667eea; 
+            margin-top: 35px;
+            margin-bottom: 20px;
+            border-left: 5px solid #5a67d8;
+            padding-left: 15px;
+        }
+        .lang-marker {
+            display: inline-block;
+            padding: 3px 10px;
+            border-radius: 12px;
+            font-size: 0.75em;
+            font-weight: 700;
+            margin-left: 10px;
+        }
+        .lang-ro {
+            background: #fee;
+            color: #c00;
+        }
+        .lang-en {
+            background: #eef;
+            color: #00c;
+        }
+        .bilingual-section {
+            background: #f8f9fa;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            border-left: 5px solid #667eea;
+        }
+        p {
+            margin: 15px 0;
+        }
+        .highlight {
+            background: #fff3cd;
+            padding: 2px 6px;
+            border-radius: 3px;
+        }
+        .info-box {
+            background: #e7f3ff;
+            border-left: 5px solid #2196F3;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 5px;
+        }
+        ul {
+            margin: 15px 0;
+            padding-left: 25px;
+        }
+        li {
+            margin: 8px 0;
+        }
+        footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 2px solid #e5e7eb;
+            text-align: center;
+            color: #6b7280;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>
+            🌐 Ghid Complet: Inteligența Artificială și Învățarea Automată
+            <span class="lang-marker lang-ro">RO</span>
+        </h1>
+        <h1 style="border-top: 2px solid #e5e7eb; padding-top: 20px; margin-top: 10px;">
+            🌍 Complete Guide to Artificial Intelligence & Machine Learning
+            <span class="lang-marker lang-en">EN</span>
+        </h1>
+        
+        <div class="info-box">
+            <p><strong>📚 Despre acest ghid / About this guide:</strong></p>
+            <p>Acest document prezintă concepte fundamentale din domeniul inteligenței artificiale într-un format bilingv (română și engleză), conceput pentru a facilita înțelegerea conceptelor atât pentru vorbitorii de limbă română, cât și pentru cei de limbă engleză.</p>
+            <p>This document presents fundamental concepts in artificial intelligence in a bilingual format (Romanian and English), designed to facilitate understanding for both Romanian and English speakers.</p>
+        </div>
+        
+        <h2>
+            🧠 Ce este Inteligența Artificială?
+            <span class="lang-marker lang-ro">RO</span>
+        </h2>
+        
+        <p>
+            Inteligența artificială (IA) reprezintă domeniul științei calculatoarelor care se concentrează pe crearea de sisteme capabile să îndeplinească sarcini care, în mod tradițional, necesită inteligență umană. Aceste sarcini includ <span class="highlight">recunoașterea vorbirii</span>, <span class="highlight">procesarea limbajului natural</span>, <span class="highlight">luarea deciziilor</span> și <span class="highlight">recunoașterea vizuală</span>.
+        </p>
+        
+        <p>
+            Domeniul IA a cunoscut o evoluție extraordinară în ultimii ani, datorită disponibilității crescute a puterii de calcul, volumului mare de date și îmbunătățirilor algoritmice. Astăzi, sistemele de IA sunt utilizate în aproape toate industriile, de la asistența medicală la finanțe, de la transport la educație.
+        </p>
+        
+        <h2>
+            🤖 What is Artificial Intelligence?
+            <span class="lang-marker lang-en">EN</span>
+        </h2>
+        
+        <p>
+            Artificial Intelligence (AI) represents the field of computer science that focuses on creating systems capable of performing tasks that traditionally require human intelligence. These tasks include <span class="highlight">speech recognition</span>, <span class="highlight">natural language processing</span>, <span class="highlight">decision-making</span>, and <span class="highlight">visual recognition</span>.
+        </p>
+        
+        <p>
+            The AI field has experienced extraordinary evolution in recent years, thanks to increased availability of computing power, large volumes of data, and algorithmic improvements. Today, AI systems are used in nearly all industries, from healthcare to finance, from transportation to education.
+        </p>
+        
+        <div class="bilingual-section">
+            <h2>
+                📊 Învățarea Automată: Fundamentele
+                <span class="lang-marker lang-ro">RO</span>
+            </h2>
+            
+            <p>
+                <strong>Învățarea automată (Machine Learning)</strong> este un subcâmp al inteligenței artificiale care permite sistemelor să învețe și să se îmbunătățească din experiență fără a fi programate explicit pentru fiecare sarcină. Există trei tipuri principale de învățare automată:
+            </p>
+            
+            <ul>
+                <li><strong>Învățarea supervizată:</strong> Algoritmii învață din date etichetate, unde fiecare exemplu de antrenament este asociat cu un rezultat corect. De exemplu, un sistem poate fi antrenat să recunoască pisici în imagini folosind mii de fotografii etichetate cu "pisică" sau "nu este pisică".</li>
+                
+                <li><strong>Învățarea nesupervizată:</strong> Sistemele identifică modele în date neetichetate. Clusterizarea și reducerea dimensionalității sunt exemple comune. Această abordare este utilă atunci când nu avem etichete pentru datele noastre.</li>
+                
+                <li><strong>Învățarea prin întărire:</strong> Algoritmii învață prin încercare și eroare, primind recompense sau penalizări pentru acțiunile lor. Această metodă este folosită în robotică, jocuri și sisteme autonome.</li>
+            </ul>
+            
+            <p>
+                Procesul de învățare automată implică mai mulți pași esențiali: <em>colectarea datelor</em>, <em>preprocesarea</em>, <em>alegerea modelului</em>, <em>antrenarea</em>, <em>evaluarea</em> și <em>ajustarea parametrilor</em>. Fiecare pas este crucial pentru obținerea unui model performant.
+            </p>
+        </div>
+        
+        <div class="bilingual-section">
+            <h2>
+                📈 Machine Learning: The Fundamentals
+                <span class="lang-marker lang-en">EN</span>
+            </h2>
+            
+            <p>
+                <strong>Machine Learning</strong> is a subfield of artificial intelligence that enables systems to learn and improve from experience without being explicitly programmed for each task. There are three main types of machine learning:
+            </p>
+            
+            <ul>
+                <li><strong>Supervised Learning:</strong> Algorithms learn from labeled data, where each training example is associated with a correct outcome. For example, a system can be trained to recognize cats in images using thousands of photos labeled as "cat" or "not cat".</li>
+                
+                <li><strong>Unsupervised Learning:</strong> Systems identify patterns in unlabeled data. Clustering and dimensionality reduction are common examples. This approach is useful when we don't have labels for our data.</li>
+                
+                <li><strong>Reinforcement Learning:</strong> Algorithms learn through trial and error, receiving rewards or penalties for their actions. This method is used in robotics, gaming, and autonomous systems.</li>
+            </ul>
+            
+            <p>
+                The machine learning process involves several essential steps: <em>data collection</em>, <em>preprocessing</em>, <em>model selection</em>, <em>training</em>, <em>evaluation</em>, and <em>hyperparameter tuning</em>. Each step is crucial for obtaining a high-performing model.
+            </p>
+        </div>
+        
+        <h2>
+            🔬 Rețele Neuronale Artificiale
+            <span class="lang-marker lang-ro">RO</span>
+        </h2>
+        
+        <p>
+            Rețelele neuronale artificiale sunt inspirate de structura creierului uman și reprezintă fundamentul învățării profunde (deep learning). O rețea neuronală constă din straturi de noduri interconectate, numite neuroni artificiali, care procesează informația într-un mod ierarhic.
+        </p>
+        
+        <p>
+            Fiecare neuron primește intrări, aplică o funcție de activare și transmite rezultatul către următorul strat. Prin acest proces de propagare înainte (forward propagation) și propagare înapoi a erorilor (backpropagation), rețeaua își ajustează greutățile pentru a minimiza eroarea de predicție.
+        </p>
+        
+        <p>
+            <strong>Arhitecturi importante includ:</strong> Rețele convoluționale (CNN) pentru procesarea imaginilor, rețele recurente (RNN) pentru date secvențiale, și transformerele care au revoluționat procesarea limbajului natural prin mecanisme de atenție.
+        </p>
+        
+        <h2>
+            🧪 Artificial Neural Networks
+            <span class="lang-marker lang-en">EN</span>
+        </h2>
+        
+        <p>
+            Artificial neural networks are inspired by the structure of the human brain and represent the foundation of deep learning. A neural network consists of layers of interconnected nodes, called artificial neurons, which process information in a hierarchical manner.
+        </p>
+        
+        <p>
+            Each neuron receives inputs, applies an activation function, and transmits the result to the next layer. Through this process of forward propagation and backpropagation of errors, the network adjusts its weights to minimize prediction error.
+        </p>
+        
+        <p>
+            <strong>Important architectures include:</strong> Convolutional networks (CNN) for image processing, recurrent networks (RNN) for sequential data, and transformers which have revolutionized natural language processing through attention mechanisms.
+        </p>
+        
+        <div class="bilingual-section">
+            <h2>
+                💬 Procesarea Limbajului Natural (NLP)
+                <span class="lang-marker lang-ro">RO</span>
+            </h2>
+            
+            <p>
+                Procesarea limbajului natural este domeniul care se ocupă cu interacțiunea dintre computere și limbajul uman. Aplicațiile NLP includ traducerea automată, analiza sentimentelor, sumarizarea textelor, și asistenții vocali precum Siri sau Alexa.
+            </p>
+            
+            <p>
+                Modele mari de limbaj (Large Language Models - LLM) precum GPT, BERT și alte arhitecturi bazate pe transformere au adus progrese semnificative în domeniu. Aceste modele sunt pre-antrenate pe volume masive de text și pot fi adaptate pentru sarcini specifice prin tehnici de fine-tuning sau prompt engineering.
+            </p>
+            
+            <p>
+                <strong>Provocări în NLP:</strong> Ambiguitatea limbajului natural, înțelegerea contextului, sarcasmul și ironia, dialectele și variantele lingvistice, precum și diferențele culturale reprezintă provocări continue pentru dezvoltatorii de sisteme NLP.
+            </p>
+        </div>
+        
+        <div class="bilingual-section">
+            <h2>
+                🗣️ Natural Language Processing (NLP)
+                <span class="lang-marker lang-en">EN</span>
+            </h2>
+            
+            <p>
+                Natural language processing is the field that deals with the interaction between computers and human language. NLP applications include machine translation, sentiment analysis, text summarization, and voice assistants like Siri or Alexa.
+            </p>
+            
+            <p>
+                Large Language Models (LLM) such as GPT, BERT, and other transformer-based architectures have brought significant progress to the field. These models are pre-trained on massive volumes of text and can be adapted for specific tasks through fine-tuning techniques or prompt engineering.
+            </p>
+            
+            <p>
+                <strong>Challenges in NLP:</strong> The ambiguity of natural language, context understanding, sarcasm and irony, dialects and linguistic variants, as well as cultural differences represent ongoing challenges for NLP system developers.
+            </p>
+        </div>
+        
+        <h2>
+            👁️ Viziunea Computerizată (Computer Vision)
+            <span class="lang-marker lang-ro">RO</span>
+        </h2>
+        
+        <p>
+            Viziunea computerizată permite computerelor să "vadă" și să interpreteze informații vizuale din lume. Aplicațiile practice includ recunoașterea facială, vehicule autonome, diagnosticare medicală prin analiză de imagini, și sisteme de securitate inteligente.
+        </p>
+        
+        <p>
+            Rețelele convoluționale (CNN) au transformat domeniul viziunii computerizate, atingând performanțe supraomenești în sarcini de clasificare a imaginilor. Arhitecturi precum ResNet, VGG și Inception au stabilit noi standarde în domeniu.
+        </p>
+        
+        <h2>
+            👀 Computer Vision
+            <span class="lang-marker lang-en">EN</span>
+        </h2>
+        
+        <p>
+            Computer vision enables computers to "see" and interpret visual information from the world. Practical applications include facial recognition, autonomous vehicles, medical diagnostics through image analysis, and intelligent security systems.
+        </p>
+        
+        <p>
+            Convolutional Neural Networks (CNN) have transformed the computer vision field, achieving superhuman performance in image classification tasks. Architectures such as ResNet, VGG, and Inception have set new standards in the field.
+        </p>
+        
+        <div class="info-box">
+            <h2>
+                ⚖️ Considerații Etice în IA / Ethical Considerations in AI
+                <span class="lang-marker lang-ro">RO</span> <span class="lang-marker lang-en">EN</span>
+            </h2>
+            
+            <p>
+                <strong>Română:</strong> Pe măsură ce sistemele de IA devin mai puternice și mai răspândite, întrebările etice devin din ce în ce mai importante. Probleme precum bias-ul algoritmilor, transparența deciziilor IA, confidențialitatea datelor, și impactul asupra forței de muncă necesită atenție serioasă din partea dezvoltatorilor, cercetătorilor și legiuitorilor.
+            </p>
+            
+            <p>
+                <strong>English:</strong> As AI systems become more powerful and widespread, ethical questions become increasingly important. Issues such as algorithmic bias, transparency of AI decisions, data privacy, and impact on the workforce require serious attention from developers, researchers, and legislators.
+            </p>
+            
+            <p>
+                <strong>Română:</strong> Principii esențiale includ: dezvoltarea responsabilă, testarea riguroasă pentru bias și discriminare, explicabilitatea deciziilor, respectarea drepturilor utilizatorilor, și considerarea impactului social pe termen lung.
+            </p>
+            
+            <p>
+                <strong>English:</strong> Essential principles include: responsible development, rigorous testing for bias and discrimination, explainability of decisions, respect for user rights, and consideration of long-term social impact.
+            </p>
+        </div>
+        
+        <h2>
+            🚀 Viitorul Inteligenței Artificiale / The Future of Artificial Intelligence
+            <span class="lang-marker lang-ro">RO</span> <span class="lang-marker lang-en">EN</span>
+        </h2>
+        
+        <p>
+            <strong>[RO]</strong> Viitorul IA promite dezvoltări extraordinare: inteligență artificială generală (AGI), care ar putea egala capacitățile cognitive umane în toate domeniile; sisteme multimodale care combină text, imagine, audio și video; și aplicații revoluționare în domenii precum medicina personalizată, educație adaptivă și cercetare științifică accelerată.
+        </p>
+        
+        <p>
+            <strong>[EN]</strong> The future of AI promises extraordinary developments: Artificial General Intelligence (AGI), which could match human cognitive capabilities across all domains; multimodal systems that combine text, image, audio, and video; and revolutionary applications in fields such as personalized medicine, adaptive education, and accelerated scientific research.
+        </p>
+        
+        <p>
+            <strong>[RO]</strong> Provocările rămân: asigurarea siguranței sistemelor IA avansate, gestionarea consecințelor socio-economice, menținerea controlului uman asupra deciziilor critice, și dezvoltarea unui cadru legal și etic robust pentru era IA.
+        </p>
+        
+        <p>
+            <strong>[EN]</strong> Challenges remain: ensuring the safety of advanced AI systems, managing socio-economic consequences, maintaining human control over critical decisions, and developing a robust legal and ethical framework for the AI era.
+        </p>
+        
+        <h2>
+            📚 Resurse pentru Învățare / Learning Resources
+            <span class="lang-marker lang-ro">RO</span> <span class="lang-marker lang-en">EN</span>
+        </h2>
+        
+        <p><strong>Pentru vorbitorii de limba română / For Romanian speakers:</strong></p>
+        <ul>
+            <li>Cursuri universitare de IA la Universitatea Politehnica București</li>
+            <li>Comunități online: AI România, Machine Learning România</li>
+            <li>Conferințe: Romanian AI Summit, Tech Talks România</li>
+        </ul>
+        
+        <p><strong>Pentru vorbitorii de limba engleză / For English speakers:</strong></p>
+        <ul>
+            <li>Online courses: Coursera (Andrew Ng), Fast.ai, Deep Learning Specialization</li>
+            <li>Communities: Reddit (r/MachineLearning), Papers with Code</li>
+            <li>Conferences: NeurIPS, ICML, CVPR, ACL</li>
+        </ul>
+        
+        <div class="info-box">
+            <p><strong>🎯 Concluzie / Conclusion:</strong></p>
+            <p>
+                Intelligența artificială reprezintă una dintre cele mai transformatoare tehnologii ale secolului XXI. Înțelegerea fundamentelor sale și implicarea activă în dezvoltarea responsabilă a acestor sisteme sunt esențiale pentru viitorul nostru colectiv.
+            </p>
+            <p>
+                Artificial intelligence represents one of the most transformative technologies of the 21st century. Understanding its foundations and active involvement in the responsible development of these systems are essential for our collective future.
+            </p>
+        </div>
+    </div>
+    
+    <footer>
+        <p><a href="../../../index.html" style="color: #5a67d8; text-decoration: none;">← Înapoi la Experimente / Back to Experiments</a></p>
+        <p style="font-size: 0.9em; margin-top: 10px;">A-baselines: Multilingual Page (RO + EN) - Language Processing Test</p>
+    </footer>
+</body>
+</html>
