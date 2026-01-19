@@ -176,24 +176,24 @@ layout: none
         {% if experiment_folders.size == 0 %}
             <p style="text-align: center; color: #ffcc00;">No experiments found. Add folders to /experiments/</p>
         {% else %}
-            {% for file i{{ "now" | date: "%B %d, %Y" }}</p>
+            {% for file in experiment_folders %}
+                {% assign path_parts = file.path | split: "/" %}
+                {% assign folder_name = path_parts[2] %}
+                {% assign title = folder_name | replace: "-", " " | replace: "_", " " | capitalize %}
+                {% assign counter = forloop.index %}
+                
+                <div class="experiment-item">
+                    <h3>Experiment {{ counter }}: {{ title }}</h3>
+                    <div class="meta">Folder: {{ folder_name }}</div>
+                    <a href="{{ file.path | relative_url }}" target="_blank">View Experiment →</a>
+                </div>
+            {% endfor %}
+        {% endif %}
+    </div>
+    
+    <footer>
+        <p>Last updated: {{ "now" | date: "%B %d, %Y" }}</p>
         <p>Bachelor Thesis Research Project</p>
-    </footer    
-                const title = generateTitle(folderName);
-                const path = `experiments/${folderName}/index.html`;
-                
-                item.innerHTML = `
-                    <h3>Experiment ${index + 1}: ${title}</h3>
-                    <div class="meta">Folder: ${folderName}</div>
-                    <a href="${path}" target="_blank">View Experiment →</a>
-                `;
-                
-                container.appendChild(item);
-            });
-        }
-        
-        // Load on page ready
-        document.addEventListener('DOMContentLoaded', loadExperiments);
-    </script>
+    </footer>
 </body>
 </html>
