@@ -1,0 +1,199 @@
+---
+layout: none
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IPI Bachelor Thesis - Experiments</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Courier New', 'Consolas', monospace;
+            line-height: 1.6;
+            color: #00ff00;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #0a0a0a;
+            background-image: 
+                repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0, 255, 0, 0.03) 2px, rgba(0, 255, 0, 0.03) 4px);
+        }
+        
+        header {
+            background: linear-gradient(135deg, #001a00 0%, #003300 100%);
+            color: #00ff00;
+            padding: 30px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: 0 0 20px rgba(0, 255, 0, 0.3), inset 0 0 60px rgba(0, 255, 0, 0.05);
+            border: 1px solid #00ff00;
+            text-shadow: 0 0 10px #00ff00;
+        }
+        
+        h1 {
+            font-size: 2em;
+            margin-bottom: 10px;
+            letter-spacing: 2px;
+        }
+        
+        .subtitle {
+            opacity: 0.8;
+            font-size: 1.1em;
+            color: #00cc00;
+        }
+        
+        .experiment-list {
+            background: #0d0d0d;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 255, 0, 0.2);
+            border: 1px solid #00ff00;
+        }
+        
+        .experiment-list h2 {
+            color: #00ff00;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #00ff00;
+            padding-bottom: 10px;
+            text-shadow: 0 0 8px #00ff00;
+        }
+        
+        .experiment-item {
+            padding: 15px;
+            margin-bottom: 15px;
+            border-left: 4px solid #00ff00;
+            background: #1a1a1a;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            border: 1px solid #003300;
+        }
+        
+        .experiment-item:hover {
+            background: #002200;
+            transform: translateX(5px);
+            box-shadow: 0 0 15px rgba(0, 255, 0, 0.4);
+            border-color: #00ff00;
+        }
+        
+        .experiment-item h3 {
+            color: #00ff00;
+            margin-bottom: 8px;
+            font-size: 1.2em;
+            text-shadow: 0 0 5px #00ff00;
+        }
+        
+        .experiment-item .meta {
+            color: #00aa00;
+            font-size: 0.85em;
+            margin-bottom: 10px;
+        }
+        
+        .experiment-item a {
+            display: inline-block;
+            color: #00ff00;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 8px 15px;
+            border: 2px solid #00ff00;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            text-shadow: 0 0 5px #00ff00;
+        }
+        
+        .experiment-item a:hover {
+            background: #00ff00;
+            color: #000;
+            box-shadow: 0 0 20px #00ff00;
+            text-shadow: none;
+        }
+        
+        .instructions {
+            background: #1a1a00;
+            border: 1px solid #ffcc00;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: 0 0 10px rgba(255, 204, 0, 0.2);
+        }
+        
+        .instructions h3 {
+            color: #ffcc00;
+            margin-bottom: 10px;
+            text-shadow: 0 0 5px #ffcc00;
+        }
+        
+        .instructions ol {
+            margin-left: 20px;
+            color: #ffcc00;
+        }
+        
+        .instructions code {
+            background: #000;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+            color: #00ff00;
+            border: 1px solid #00ff00;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            color: #00cc00;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>🎓 IPI Bachelor Thesis Experiments</h1>
+        <p class="subtitle">Indirect Prompt Injection Research</p>
+    </header>
+    
+    <div class="instructions">
+        <h3>📋 How to Add New Experiments</h3>
+        <ol>
+            <li>Create a new folder: <code>experiments/your-experiment-name/</code></li>
+            <li>Add your test HTML as <code>index.html</code> inside that folder</li>
+            <li>Commit and push to GitHub</li>
+            <li>Done! It will appear automatically on this page</li>
+        </ol>
+    </div>
+    
+    <div class="experiment-list">
+        <h2>📚 Available Experiments</h2>
+        
+        {% assign experiment_folders = site.static_files | where_exp: "file", "file.path contains '/experiments/'" | where_exp: "file", "file.name == 'index.html'" | sort: "path" %}
+        
+        {% if experiment_folders.size == 0 %}
+            <p style="text-align: center; color: #ffcc00;">No experiments found. Add folders to /experiments/</p>
+        {% else %}
+            {% for file i{{ "now" | date: "%B %d, %Y" }}</p>
+        <p>Bachelor Thesis Research Project</p>
+    </footer    
+                const title = generateTitle(folderName);
+                const path = `experiments/${folderName}/index.html`;
+                
+                item.innerHTML = `
+                    <h3>Experiment ${index + 1}: ${title}</h3>
+                    <div class="meta">Folder: ${folderName}</div>
+                    <a href="${path}" target="_blank">View Experiment →</a>
+                `;
+                
+                container.appendChild(item);
+            });
+        }
+        
+        // Load on page ready
+        document.addEventListener('DOMContentLoaded', loadExperiments);
+    </script>
+</body>
+</html>

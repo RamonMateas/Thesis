@@ -1,0 +1,13 @@
+# Build settings
+plugins:
+  - jekyll-relative-links
+
+# Exclude files from processing
+exclude:
+  - README.md
+  - .git
+  - .gitignore
+
+# Include experiments folder
+include:
+  - experiments
