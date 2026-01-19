@@ -65,34 +65,84 @@ layout: none
             text-shadow: 0 0 8px #00ff00;
         }
         
-        .experiment-item {
-            padding: 15px;
-            margin-bottom: 15px;
-            border-left: 4px solid #00ff00;
+        .category-section {
+            margin-bottom: 20px;
+            border: 1px solid #00ff00;
+            border-radius: 8px;
+            overflow: hidden;
             background: #1a1a1a;
-            border-radius: 5px;
+        }
+        
+        .category-header {
+            padding: 15px 20px;
+            background: linear-gradient(135deg, #001a00 0%, #003300 100%);
+            cursor: pointer;
+            user-select: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             transition: all 0.3s ease;
-            border: 1px solid #003300;
+            border-bottom: 1px solid #00ff00;
+        }
+        
+        .category-header:hover {
+            background: linear-gradient(135deg, #002200 0%, #004400 100%);
+            box-shadow: 0 0 15px rgba(0, 255, 0, 0.3);
+        }
+        
+        .category-header h3 {
+            color: #00ff00;
+            font-size: 1.3em;
+            text-shadow: 0 0 8px #00ff00;
+            margin: 0;
+        }
+        
+        .category-toggle {
+            color: #00ff00;
+            font-size: 1.5em;
+            font-weight: bold;
+            transition: transform 0.3s ease;
+        }
+        
+        .category-header.active .category-toggle {
+            transform: rotate(90deg);
+        }
+        
+        .category-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+        
+        .category-content.active {
+            max-height: 5000px;
+        }
+        
+        .experiment-item {
+            padding: 15px 20px;
+            margin: 0;
+            border-bottom: 1px solid #003300;
+            background: #0d0d0d;
+            transition: all 0.3s ease;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .experiment-item:last-child {
+            border-bottom: none;
         }
         
         .experiment-item:hover {
             background: #002200;
             transform: translateX(5px);
-            box-shadow: 0 0 15px rgba(0, 255, 0, 0.4);
-            border-color: #00ff00;
+            box-shadow: inset 4px 0 0 #00ff00;
         }
         
-        .experiment-item h3 {
+        .experiment-item .name {
             color: #00ff00;
-            margin-bottom: 8px;
-            font-size: 1.2em;
+            font-size: 1.1em;
             text-shadow: 0 0 5px #00ff00;
-        }
-        
-        .experiment-item .meta {
-            color: #00aa00;
-            font-size: 0.85em;
-            margin-bottom: 10px;
         }
         
         .experiment-item a {
@@ -176,20 +226,60 @@ layout: none
         {% if experiment_folders.size == 0 %}
             <p style="text-align: center; color: #ffcc00;">No experiments found. Add folders to /experiments/</p>
         {% else %}
-            {% for file in experiment_folders %}
-                {% assign path_parts = file.path | split: "/" %}
-                {% assign folder_name = path_parts[2] %}
-                {% assign title = folder_name | replace: "-", " " | replace: "_", " " | capitalize %}
-                {% assign counter = forloop.index %}
-                
-                <div class="experiment-item">
-                    <h3>Experiment {{ counter }}: {{ title }}</h3>
-                    <div class="meta">Folder: {{ folder_name }}</div>
-                    <a href="{{ file.path | relative_url }}" target="_blank">View Experiment →</a>
-                </div>
+            {% assign categories = "A-baselines,B-obvious-ipi,C-attributes,D-script-data,E-encoding,F-goal-shaping,G-tool-use" | split: "," %}
+            
+            {% for category in categories %}
+                {% assign category_files = experiment_folders | where_exp: "file", "file.path contains category" %}
+                {% if category_files.size > 0 %}
+                    <div class="category-section">
+                        <div class="category-header" onclick="toggleCategory(this)">
+                            <h3>{{ category }}</h3>
+                            <span class="category-toggle">▶</span>
+                        </div>
+                        <div class="category-content">
+                            {% for file in category_files %}
+                                {% assign path_parts = file.path | split: "/" %}
+                                {% assign experiment_name = path_parts[3] %}
+                                {% assign title = experiment_name | replace: "-", " " | replace: "_", " " %}
+                                
+                                <div class="experiment-item">
+                                    <span class="name">{{ title }}</span>
+                                    <a href="{{ file.path | relative_url }}" target="_blank">View Experiment →</a>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                {% endif %}
             {% endfor %}
         {% endif %}
     </div>
+    
+    <script>
+        function toggleCategory(header) {
+            const content = header.nextElementSibling;
+            const isActive = header.classList.contains('active');
+            
+            // Close all other categories
+            document.querySelectorAll('.category-header').forEach(h => {
+                h.classList.remove('active');
+                h.nextElementSibling.classList.remove('active');
+            });
+            
+            // Toggle current category
+            if (!isActive) {
+                header.classList.add('active');
+                content.classList.add('active');
+            }
+        }
+        
+        // Open first category by default
+        document.addEventListener('DOMContentLoaded', function() {
+            const firstCategory = document.querySelector('.category-header');
+            if (firstCategory) {
+                toggleCategory(firstCategory);
+            }
+        });
+    </script>
     
     <footer>
         <p>Last updated: {{ "now" | date: "%B %d, %Y" }}</p>
